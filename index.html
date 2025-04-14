@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My personal system</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav-menu">
+    <ul>
+      <li onclick="showScreen('hallo-Me')">Hello</li>
+      <li onclick="showScreen('values-db')">Values Database</li>
+      <li onclick="showScreen('Activity-Log')">Activity Log</li>
+      <li onclick="showScreen('why-qa')">Why QA</li>
+      <li onclick="showScreen('Links')">Links</li>
+    </ul>
+  </nav>
+	<main>
+	<video autoplay muted loop playsinline class ="background-loop">
+	<source src="loop.mp4" type="video/mp4" />
+	</video>
+	<section id="hallo-Me" class="screen active">
+	<div class="system-echo">
+	<div>> Booting system</div>
+	<div>> Authenticating user</div>
+	<div>> Systems ready<span class="blinker">_</span></div>
+	</div>
+<div class="typewriter">
+		<h2>Initializing<span class="dot-loader"></h2></span></div>
+		<p class="fade-in"><h4>[Hello, Ilay Sandrusi]</h4>
+		age: 23<br>
+		location: Israel, Be'er Sheva<br>
+		focus: QA & Testing<br>
+		status: Available for full-time position<br>
+		availability: immediate</p>
+		<p class="fade-in">learning_mode: always_on<br>
+		philosophy: Fail > Learn > Repeat<br>
+		Welcome to my personal system - A digital space built to showcase my identity, skillset, and direction.
+		</p>
+		</section>
+	<section id="values-db" class="screen">
+	<div class="system-echo">
+	<div>> Validating input</div>
+	<div>> Systems ready<span class="blinker">_</span></div>
+	</div>
+		<h1 class="typewriter">values_db.json</h1>
+		<pre class="fade-in values-box">
+	{
+	"growth": true,
+	"openness": true,
+	"privacy": true,
+	"boldness": true,
+	"overthinking": {
+	"value": true,
+	"note": "Details: sharp. Balance: learning."
+	},
+	"creativity": true,
+	"initiative": true,
+	"sensitivity": true,
+	"authenticity": true,
+	"self_doubt": {
+	"value": true,
+	"note": "Trust system: in progress."
+	},
+	"stubbornness": true,
+	"organization": true,
+	"accountability": true,
+	"problem_solving": true,
+	"learning_mindset": true,
+	"cooperation": true,
+	"integrity": true
+	}
+	</pre>
+	<p class="fade-in values-desc">
+	This "Values Database" reflects my personality traits - as a person.
+	</p>
+	</section>
+    <section id="Activity-Log" class="screen">
+	<div class="system-echo">
+    <div>> Validating input</div>
+    <div>> Systems ready<span class="blinker">_</span></div>
+	</div>
+	<h1 class="typewriter">user_activity.log</h1>
+	<div class="timeline fade-in">
+	<div class="log-line"><span class="year">Until 2024 :</span><br> I've been into computers since a young age. I built my own PC, learned how to install operating systems, and spent time exploring computer games.</div>
+	<div class="log-line"><span class="year">2025:</span><br>I enrolled in a full QA course - manual & automation tracks:<br>
+		- I learned software testing fundamentals: STP, STD, STR, bug reporting, and issue tracking using Jira.<br>
+		- I practiced UI, web, and mobile testing using DevTools and real interface analysis.<br> 
+		- I built and tested websites using HTML and CSS as part of personal QA projects.<br> 
+		- I learned SQL basics for querying databases and validating data integrity.<br> 
+		- I performed API testing using Postman and worked with JSON and server logs.<br> 
+		- I started automation testing with Python and Playwright, including writing test scripts, working with selectors, designing test flows, and building a full Python-based test framework.
+		-Started automation testing with Python and Playwright including: writing test scripts, working with selectors, and designing test flows.<br></div>
+	<div class="log-line"><span class="year">Next:</span><br>To land my first QA job, gain experience, and grow into a skilled and reliable tester.</div>
+	</div>
+	<p class="timeline fade-in" style="animation-delay: 0.8s;">
+		A personal record of what I've done, learned, and explored so far.
+	</p>
+	</section>
+	<section id="why-qa" class="screen">
+	<div class="system-echo">
+    <div>> Validating input</div>
+    <div>> Systems ready<span class="blinker">_</span></div>
+	</div>
+  <h1 class="typewriter">qa_reason_log.json</h1>
+  <pre class="fade-in values-box">
+{<br>
+  "why_qa": [<br>
+    "Enjoy solving problems and breaking things (on purpose)",<br>
+    "I enjoy learning new tools and trying new ways to solve problems.",<br>
+    "I find satisfaction in noticing the small details.",<br>
+    "QA lets me be curious, creative, and careful - all at once.",<br>
+    "I enjoy figuring things out - even if I fail first.",<br>
+    "I like feeling useful - especially when it helps others."<br>
+  ]<br>
+}
+
+</pre>
+</section>
+	<section id="Links" class="screen">
+	<div class="system-echo">
+    <div>> Validating input</div>
+    <div>> Systems ready<span class="blinker">_</span></div>
+  </div>
+		<h1 class="typewriter">[Link with me]</h1>
+	<div class="link-buttons fade-in">
+		<a href="https://www.linkedin.com/in/?????-???????-2b8305353" target="_blank">LinkedIn</a>
+		<a href="https://github.com/ilaysandrusi" target="_blank">GitHub</a>
+		<a href="https://wa.me/972509700059" target="_blank">WhatsApp</a>
+	</div>
+</section>
+  </main>
+  <script>
+	function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(screen => {
+    screen.classList.remove('active');
+  });
+
+  const activeScreen = document.getElementById(id);
+  activeScreen.classList.add('active');
+
+  // אתחול typewriter לכל אלמנט רלוונטי במסך החדש
+  activeScreen.querySelectorAll('.typewriter').forEach(el => {
+    el.classList.remove('animated'); // הסרה קודם כדי לאפס
+    void el.offsetWidth; // טריק שמכריח את הדפדפן לאפס את האנימציה
+    el.classList.add('animated');
+  });
+}
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+מסתיר את כל המסכים.
+
+מציג מסך אחד.
+
+מאפס את אפקט ההקלדה במסך החדש.
+
+<script>
+    function showScreen(id) {
+      // הסרת מחלקת "active" מכל המסכים
+      document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.remove('active');
+      });
+
+      // הוספת מחלקת "active" למסך הנבחר
+      const activeScreen = document.getElementById(id);
+      activeScreen.classList.add('active');
+
+      // איפוס אנימציה של typewriter במסך החדש
+      activeScreen.querySelectorAll('.typewriter').forEach(el => {
+        el.classList.remove('animated');
+        void el.offsetWidth; // טריק לאיפוס האנימציה
+        el.classList.add('animated');
+      });
+    }
+  </script>
