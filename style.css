@@ -5,8 +5,8 @@ body {
   font-family: 'Courier New', Courier, monospace;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .nav-menu {
@@ -63,7 +63,7 @@ main {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   object-fit: cover;
   z-index: 0;
   opacity: 0.1;
@@ -125,7 +125,7 @@ main {
 
 .typewriter {
   display: inline-block;
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
   width: 0ch;
   border-right: 2px solid #33ff99;
@@ -304,3 +304,4 @@ main {
     padding: 20px;
   }
 }
+
