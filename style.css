@@ -35,9 +35,7 @@ body {
 .nav-menu li:hover {
   border: 1px solid #33ff99;
   background-color: #1a1a1a;
-  
 }
-
 
 main {
   flex: 1;
@@ -46,7 +44,7 @@ main {
 
 .screen {
   position: absolute;
-  top: 0px;
+  top: 0px; /* Leave space for nav */
   left: 0;
   right: 0;
   bottom: 0;
@@ -264,7 +262,14 @@ main {
   body {
     font-size: 0.95em;
   }
-  
+  @media screen and (max-width: 768px) {
+  .system-echo {
+    bottom: auto;
+    right: 10px;
+    font-size: 0.7em;
+    opacity: 0.4;
+  }
+}
 
   .nav-menu ul {
     flex-direction: column;
@@ -310,27 +315,24 @@ main {
   padding: 40px;
   animation: fadeInContent 0.5s ease-in-out;
   overflow-y: auto;
-  z-index: 0;
+  z-index: 1;
+}
 }
 
 .screen::before {
   content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #0d0d0d;
-  opacity: 0.50;
-  z-index: 0;
+  display: none;
 }
 
 .screen > * {
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .system-echo {
   z-index: 2;
   position: absolute;
-  bottom: 70px;
+  bottom: 30px;
   right: 30px;
 }
 
@@ -347,17 +349,11 @@ main {
   overflow-y: auto;
   z-index: 1;
 }
+}
 
 .screen::before {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #0d0d0d;
-  opacity: 0.92;
-  z-index: 0;
+  display: none;
 }
 
 .screen > * {
@@ -389,4 +385,5 @@ main {
   animation: fadeInContent 0.5s ease-in-out;
   overflow-y: auto;
   min-height: 100vh
+  z-index: 1;
 }
