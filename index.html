@@ -135,17 +135,17 @@
   function showScreen(id) {
     document.querySelectorAll('.screen').forEach(screen => {
       screen.classList.remove('active');
-      screen.scrollTop = 0; 
+      screen.scrollTop = 0;
     });
 
     const activeScreen = document.getElementById(id);
-    if (!activeScreen) return; 
+    if (!activeScreen) return;
 
     activeScreen.classList.add('active');
 
     activeScreen.querySelectorAll('.typewriter').forEach(el => {
-      el.classList.remove('animated'); 
-      void el.offsetWidth; 
+      el.classList.remove('animated');
+      void el.offsetWidth;
       el.classList.add('animated');
     });
 
