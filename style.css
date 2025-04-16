@@ -35,7 +35,9 @@ body {
 .nav-menu li:hover {
   border: 1px solid #33ff99;
   background-color: #1a1a1a;
+  
 }
+
 
 main {
   flex: 1;
@@ -44,7 +46,7 @@ main {
 
 .screen {
   position: absolute;
-  top: 0px; /* Leave space for nav */
+  top: 0px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -308,8 +310,7 @@ main {
   padding: 40px;
   animation: fadeInContent 0.5s ease-in-out;
   overflow-y: auto;
-  z-index: 1;
-}
+  z-index: 0;
 }
 
 .screen::before {
@@ -317,13 +318,13 @@ main {
   position: absolute;
   inset: 0;
   background-color: #0d0d0d;
-  opacity: 0.92;
+  opacity: 0.50;
   z-index: 0;
 }
 
 .screen > * {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .system-echo {
@@ -345,7 +346,6 @@ main {
   animation: fadeInContent 0.5s ease-in-out;
   overflow-y: auto;
   z-index: 1;
-}
 }
 
 .screen::before {
@@ -389,5 +389,4 @@ main {
   animation: fadeInContent 0.5s ease-in-out;
   overflow-y: auto;
   min-height: 100vh
-  z-index: 1;
 }
