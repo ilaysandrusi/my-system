@@ -44,7 +44,7 @@ main {
 
 .screen {
   position: absolute;
-  top: 0px; /* Leave space for nav */
+  top: 0px; 
   left: 0;
   right: 0;
   bottom: 0;
@@ -381,4 +381,6 @@ main {
   z-index: 1;
 }
 
-
+.animated {
+  animation: typing 0.9s steps(21, end) forwards;
+}
