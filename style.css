@@ -262,14 +262,7 @@ main {
   body {
     font-size: 0.95em;
   }
-  @media screen and (max-width: 768px) {
-  .system-echo {
-    bottom: auto;
-    right: 10px;
-    font-size: 0.7em;
-    opacity: 0.4;
-  }
-}
+  
 
   .nav-menu ul {
     flex-direction: column;
@@ -362,7 +355,7 @@ main {
 }
 
 .system-echo {
-  z-index: 2;
+  z-index: 9999 !important;
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -387,3 +380,5 @@ main {
   min-height: 100vh
   z-index: 1;
 }
+
+
