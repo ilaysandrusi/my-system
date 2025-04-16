@@ -131,23 +131,28 @@
 	</div>
 </section>
   </main>
-  <script>
-	function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(screen => {
-    screen.classList.remove('active');
-  });
+ <script>
+  function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(screen => {
+      screen.classList.remove('active');
+      screen.scrollTop = 0; 
+    });
 
-  const activeScreen = document.getElementById(id);
-  activeScreen.classList.add('active');
+    const activeScreen = document.getElementById(id);
+    if (!activeScreen) return; 
 
-  // אתחול typewriter לכל אלמנט רלוונטי במסך החדש
-  activeScreen.querySelectorAll('.typewriter').forEach(el => {
-    el.classList.remove('animated'); // הסרה קודם כדי לאפס
-    void el.offsetWidth; // טריק שמכריח את הדפדפן לאפס את האנימציה
-    el.classList.add('animated');
-  });
-}
+    activeScreen.classList.add('active');
 
-  </script>
+    activeScreen.querySelectorAll('.typewriter').forEach(el => {
+      el.classList.remove('animated'); 
+      void el.offsetWidth; 
+      el.classList.add('animated');
+    });
+
+    activeScreen.querySelectorAll('.fade-in').forEach(el => {
+      el.style.opacity = '1';
+    });
+  }
+</script>
 </body>
 </html>
